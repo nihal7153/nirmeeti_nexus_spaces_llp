@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 
@@ -18,11 +17,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const pathname = usePathname();
-  const isLightPage = pathname === '/about';
-
   return (
-    <header className={`${styles.navbar} ${scrolled || isLightPage ? styles.scrolled : ''}`}>
+    <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logoLockup} onClick={() => setMenuOpen(false)}>
           <Image src="/assets/logo.png" alt="Nirmeeti Nexus Logo" width={40} height={40} style={{ objectFit: 'contain' }} className={styles.logoImage} />
