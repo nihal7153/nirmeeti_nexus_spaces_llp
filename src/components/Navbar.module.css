@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 100;
+  transition: all 0.4s ease;
+  background-color: transparent;
+  color: var(--color-bg-card); /* Light text when over dark image */
+}
+
+.navbar.scrolled {
+  padding: 1rem 0;
+  background-color: rgba(250, 248, 244, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary); /* Dark text when scrolled */
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoLockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 0.2rem;
+  transition: color 0.4s ease;
+}
+
+.logoImage {
+  transition: filter 0.4s ease;
+}
+
+.navbar:not(.scrolled) .logoImage {
+  filter: brightness(0) invert(1);
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navLinks a:not(.navCta) {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.navLinks a:not(.navCta):hover {
+  opacity: 0.6;
+}
+
+.navCta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-left: 1rem;
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-primary) !important;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--color-text-primary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navCta:hover {
+  background-color: transparent;
+  color: var(--color-text-primary) !important;
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+@media (max-width: 992px) {
+  .mobileMenuBtn {
+    display: block;
+    z-index: 101;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bg-primary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .navLinks.open {
+    transform: translateY(0);
+  }
+}

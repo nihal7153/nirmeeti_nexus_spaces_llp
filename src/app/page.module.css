@@ -1,142 +1,323 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
+.homeContainer {
+  width: 100%;
+}
 
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
   display: flex;
+  align-items: flex-end;
+  padding-bottom: 10vh;
+  color: var(--color-bg-card);
+}
+
+.heroImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.brandStory {
+  background-color: var(--color-bg-primary);
+}
+
+/* Split Experience */
+.splitSection {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+}
+
+.splitHalf {
   flex: 1;
-  flex-direction: column;
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  text-decoration: none;
+  background-color: var(--color-bg-secondary);
+  border-right: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: flex 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.main {
-  display: flex;
-  flex: 1;
+.splitHalf:last-child {
+  border-right: none;
+}
+
+.splitHalf:hover {
+  flex: 1.2;
+}
+
+.splitImage {
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.7s ease;
+}
+
+.splitHalf:hover .splitImage {
+  transform: scale(1.05);
+}
+
+.splitOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+  transition: background 0.5s ease;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+.splitHalf:hover .splitOverlay {
+  background: rgba(0,0,0,0.2);
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.splitContent {
+  text-align: center;
+  z-index: 2;
+  color: #ffffff;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.splitHalf:hover .splitContent {
+  opacity: 1;
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
+.splitBtn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid #ffffff;
+  transition: all 0.3s ease;
   cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.splitBtn:hover {
+  background-color: #ffffff;
+  color: var(--color-text-primary);
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+/* Services */
+.services {
+  background-color: var(--color-bg-primary);
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.servicesHeader {
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+.serviceCard {
+  background-color: var(--color-bg-primary);
+  text-align: left;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.serviceImageContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.serviceImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.serviceCard:hover .serviceImage {
+  transform: scale(1.05);
+}
+
+.serviceContent {
+  padding: 2rem;
+}
+
+.homeServiceCard {
+  background-color: var(--color-bg-primary);
+  text-align: left;
+  border: 1px solid var(--color-border);
+  padding: 3rem 2.5rem;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.serviceIcon {
+  color: var(--color-accent);
+  transition: color 0.4s ease;
+}
+
+.serviceArrow {
+  margin-top: 2rem;
+  color: var(--color-text-secondary);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.4s ease;
+}
+
+.homeServiceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.homeServiceCard:hover h3,
+.homeServiceCard:hover p,
+.homeServiceCard:hover .serviceNumber,
+.homeServiceCard:hover .serviceIcon,
+.homeServiceCard:hover .serviceArrow {
+  color: #ffffff !important;
+}
+
+.homeServiceCard:hover .serviceArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.serviceNumber {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+
+/* Timeline */
+.process {
+  background-color: var(--color-bg-secondary);
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  z-index: 1;
+}
+
+.timelineStep {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.timelineDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-bg-primary);
+  border: 2px solid var(--color-accent);
+}
+
+.finalCta {
+  background-color: var(--color-bg-card);
+  padding: 15vh 0;
+}
+
+@media (max-width: 768px) {
+  .splitSection {
+    flex-direction: column;
+    height: 100vh;
   }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+  
+  .splitHalf {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .timeline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .timeline::before {
+    top: 0;
+    left: 10px;
+    width: 1px;
+    height: 100%;
+  }
+  
+  .timelineStep {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .timelineStep h4 {
+    margin-top: 0 !important;
   }
 }
