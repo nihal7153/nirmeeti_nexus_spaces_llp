@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Target, Eye } from 'lucide-react';
+import ContactForm from '@/components/ContactForm';
 import styles from '../page.module.css';
 
 export default function About() {
@@ -78,18 +79,7 @@ export default function About() {
               </div>
             </div>
             <div>
-              <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <input type="text" placeholder="Name" style={{ padding: '1rem', border: '1px solid var(--color-border)', fontFamily: 'var(--font-body)' }} required />
-                <input type="email" placeholder="Email" style={{ padding: '1rem', border: '1px solid var(--color-border)', fontFamily: 'var(--font-body)' }} required />
-                <input type="tel" placeholder="Phone" style={{ padding: '1rem', border: '1px solid var(--color-border)', fontFamily: 'var(--font-body)' }} required />
-                <select style={{ padding: '1rem', border: '1px solid var(--color-border)', fontFamily: 'var(--font-body)', backgroundColor: '#fff' }} required defaultValue="">
-                  <option value="" disabled>Project Type</option>
-                  <option value="commercial">Commercial</option>
-                  <option value="residential">Residential</option>
-                </select>
-                <textarea placeholder="Message" rows={5} style={{ padding: '1rem', border: '1px solid var(--color-border)', fontFamily: 'var(--font-body)', resize: 'vertical' }} required></textarea>
-                <button type="submit" className="btn-primary" style={{ marginTop: '1rem' }}>Submit Inquiry</button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
