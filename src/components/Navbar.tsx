@@ -35,7 +35,7 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        <button className={styles.mobileMenuBtn} onClick={() => setMenuOpen(!menuOpen)}>
+        <button className={`${styles.mobileMenuBtn} ${menuOpen ? styles.mobileMenuBtnOpen : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>

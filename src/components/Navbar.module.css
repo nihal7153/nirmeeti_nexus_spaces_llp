@@ -99,6 +99,10 @@
   color: inherit;
 }
 
+.mobileMenuBtnOpen {
+  color: var(--color-text-primary) !important;
+}
+
 @media (max-width: 992px) {
   .mobileMenuBtn {
     display: block;
@@ -120,7 +124,11 @@
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
-  .navLinks.open {
+  .navLinks a {
+    color: var(--color-text-primary) !important;
+  }
+
+  .navLinksOpen {
     transform: translateY(0);
   }
 }
