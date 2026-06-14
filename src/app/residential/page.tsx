@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Residential Design',
+  description: 'Bespoke residential interior design. Transform your house into a sanctuary of elegance and comfort with our turnkey solutions.',
+};
 import Link from 'next/link';
 import styles from '../page.module.css';
 

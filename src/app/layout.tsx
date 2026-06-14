@@ -6,8 +6,28 @@ import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import SmoothScroll from '@/components/SmoothScroll';
 
 export const metadata: Metadata = {
-  title: 'Nirmeeti Nexus Spaces LLP | Luxury Interior Design',
+  title: {
+    default: 'Nirmeeti Nexus Spaces LLP | Luxury Interior Design',
+    template: '%s | Nirmeeti Nexus Spaces'
+  },
   description: 'Premium commercial and residential interior design and turnkey execution firm based in Pune. Thoughtful Designs. Effortless Spaces.',
+  keywords: ['Interior Design Pune', 'Luxury Interiors', 'Commercial Design', 'Residential Design', 'Turnkey Execution Pune', 'Architects Pune'],
+  openGraph: {
+    title: 'Nirmeeti Nexus Spaces LLP | Luxury Interior Design',
+    description: 'Premium commercial and residential interior design and turnkey execution firm based in Pune.',
+    url: 'https://nirmeetinexusspaces.com',
+    siteName: 'Nirmeeti Nexus Spaces',
+    images: [
+      {
+        url: 'https://nirmeetinexusspaces.com/assets/home_hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'Nirmeeti Nexus Luxury Interior Design',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

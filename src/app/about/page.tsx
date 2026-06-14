@@ -1,5 +1,11 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { Target, Eye } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about our legacy in designing spaces of distinction. Nirmeeti Nexus Spaces LLP is a comprehensive design and execution firm in Pune.',
+};
 import ContactForm from '@/components/ContactForm';
 import styles from '../page.module.css';
 

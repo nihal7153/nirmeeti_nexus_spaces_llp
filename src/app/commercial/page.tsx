@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Commercial Design',
+  description: 'High-performance commercial interior design. We create engaging, luxurious workspaces that reflect your brand identity and boost productivity.',
+};
 import Link from 'next/link';
 import styles from '../page.module.css';
 
