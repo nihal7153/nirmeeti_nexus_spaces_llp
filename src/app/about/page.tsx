@@ -11,7 +11,7 @@ import styles from '../page.module.css';
 
 export default function About() {
   return (
-    <div className={styles.homeContainer}>
+    <div className={styles.homeContainer} id="about">
       {/* Hero Section */}
       <section className={styles.hero} style={{ height: '60vh' }}>
         <div className={styles.heroImageContainer}>
@@ -33,7 +33,7 @@ export default function About() {
       </section>
 
       {/* Philosophy Section */}
-      <section className={`section-padding`}>
+      <section id="vision" className={`section-padding`}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem' }}>
             <div>

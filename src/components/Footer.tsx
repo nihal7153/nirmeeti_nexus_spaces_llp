@@ -21,18 +21,17 @@ export default function Footer() {
         
         <div className={styles.footerLinks}>
           <h3 className={styles.columnTitle}>Services</h3>
-          <a href="/commercial">Corporate Interiors</a>
-          <a href="/commercial">Commercial Spaces</a>
-          <a href="/residential">Residential Interiors</a>
-          <a href="/about">Turnkey Solutions</a>
-          <a href="/about">Design & Build</a>
+          <a href="/commercial#corporate">Corporate Interiors</a>
+          <a href="/commercial#spaces">Commercial Spaces</a>
+          <a href="/residential#top">Residential Interiors</a>
+          <a href="/about#about">Design & Build</a>
         </div>
 
         <div className={styles.footerLinks}>
           <h3 className={styles.columnTitle}>Company</h3>
-          <a href="/about">About Us</a>
-          <a href="/about">Vision & Mission</a>
-          <a href="/about">Leadership</a>
+          <a href="/about#about">About Us</a>
+          <a href="/about#vision">Vision & Mission</a>
+          <a href="/about#about">Leadership</a>
           <a href="/about#contact">Contact</a>
         </div>
       </div>

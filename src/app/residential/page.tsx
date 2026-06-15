@@ -10,7 +10,7 @@ import styles from '../page.module.css';
 
 export default function Residential() {
   return (
-    <div className={styles.homeContainer}>
+    <div className={styles.homeContainer} id="top">
       <section className={styles.hero}>
         <div className={styles.heroImageContainer}>
           <Image

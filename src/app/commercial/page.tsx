@@ -10,7 +10,7 @@ import styles from '../page.module.css';
 
 export default function Commercial() {
   return (
-    <div className={styles.homeContainer}>
+    <div className={styles.homeContainer} id="corporate">
       <section className={styles.hero}>
         <div className={styles.heroImageContainer}>
           <Image
@@ -30,7 +30,7 @@ export default function Commercial() {
         </div>
       </section>
 
-      <section className={`section-padding`}>
+      <section id="spaces" className={`section-padding`}>
         <div className="container">
           <div className={styles.servicesGrid}>
             {[
