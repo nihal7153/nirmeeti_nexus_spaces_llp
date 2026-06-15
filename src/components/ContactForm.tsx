@@ -15,7 +15,7 @@ export default function ContactForm() {
     // Web3Forms Access Key
     formData.append("access_key", "4d3adef8-0ad4-4606-8928-68465a662634");
     // Optional: Add a subject to the email
-    formData.append("subject", "New Inquiry from Nirmeeti Nexus Website");
+    formData.append("subject", "New Inquiry from Nirmeeti Nexus Spaces Website");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {

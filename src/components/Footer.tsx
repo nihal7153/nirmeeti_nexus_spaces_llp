@@ -8,8 +8,8 @@ export default function Footer() {
       <div className={`container ${styles.footerGrid}`}>
         <div className={styles.footerBrand}>
           <div className={styles.footerLogoLockup}>
-            <Image src="/assets/logo.png" alt="Nirmeeti Nexus Logo" width={60} height={60} style={{ objectFit: 'contain' }} />
-            <h2 className={styles.footerLogoText}>NIRMEETI NEXUS</h2>
+            <Image src="/assets/logo.png" alt="Nirmeeti Nexus Spaces Logo" width={60} height={60} style={{ objectFit: 'contain' }} />
+            <h2 className={styles.footerLogoText} style={{ textAlign: 'center' }}>NIRMEETI NEXUS<br />SPACES</h2>
           </div>
           <p className="text-body">Thoughtful Designs. Effortless Spaces.</p>
           <div className={styles.contactInfo}>

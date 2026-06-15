@@ -17,7 +17,7 @@ export default function About() {
         <div className={styles.heroImageContainer}>
           <Image
             src="/assets/about_hero.png"
-            alt="Nirmeeti Nexus Design Studio"
+            alt="Nirmeeti Nexus Spaces Design Studio"
             fill
             className={styles.heroImage}
             priority

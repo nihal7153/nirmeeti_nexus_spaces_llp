@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: 'https://nirmeetinexusspaces.com/assets/home_hero.png',
         width: 1200,
         height: 630,
-        alt: 'Nirmeeti Nexus Luxury Interior Design',
+        alt: 'Nirmeeti Nexus Spaces Luxury Interior Design',
       },
     ],
     locale: 'en_IN',

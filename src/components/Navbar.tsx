@@ -21,8 +21,8 @@ export default function Navbar() {
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.logoLockup} onClick={() => setMenuOpen(false)}>
-          <Image src="/assets/logo.png" alt="Nirmeeti Nexus Logo" width={40} height={40} style={{ objectFit: 'contain' }} className={styles.logoImage} />
-          <span className={styles.logoText}>NIRMEETI NEXUS</span>
+          <Image src="/assets/logo.png" alt="Nirmeeti Nexus Spaces Logo" width={40} height={40} style={{ objectFit: 'contain' }} className={styles.logoImage} />
+          <span className={styles.logoText} style={{ textAlign: 'center' }}>NIRMEETI NEXUS<br />SPACES</span>
         </Link>
 
         <nav className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ''}`}>
