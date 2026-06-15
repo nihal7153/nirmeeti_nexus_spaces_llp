@@ -15,8 +15,8 @@ const WhatsAppIcon = ({ size = 30, color = "currentColor" }) => (
 
 export default function FloatingWhatsApp() {
   return (
-    <Link href="https://wa.me/919881198808" target="_blank" rel="noopener noreferrer" className={styles.whatsappBtn}>
+    <a href="https://wa.me/919881198808" target="_blank" rel="noopener noreferrer" className={styles.whatsappBtn}>
       <WhatsAppIcon size={30} color="#FFFFFF" />
-    </Link>
+    </a>
   );
 }

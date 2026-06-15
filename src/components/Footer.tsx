@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
@@ -21,19 +21,19 @@ export default function Footer() {
         
         <div className={styles.footerLinks}>
           <h3 className={styles.columnTitle}>Services</h3>
-          <Link href="/commercial">Corporate Interiors</Link>
-          <Link href="/commercial">Commercial Spaces</Link>
-          <Link href="/residential">Residential Interiors</Link>
-          <Link href="/about">Turnkey Solutions</Link>
-          <Link href="/about">Design & Build</Link>
+          <a href="/commercial">Corporate Interiors</a>
+          <a href="/commercial">Commercial Spaces</a>
+          <a href="/residential">Residential Interiors</a>
+          <a href="/about">Turnkey Solutions</a>
+          <a href="/about">Design & Build</a>
         </div>
 
         <div className={styles.footerLinks}>
           <h3 className={styles.columnTitle}>Company</h3>
-          <Link href="/about">About Us</Link>
-          <Link href="/about">Vision & Mission</Link>
-          <Link href="/about">Leadership</Link>
-          <Link href="/about#contact">Contact</Link>
+          <a href="/about">About Us</a>
+          <a href="/about">Vision & Mission</a>
+          <a href="/about">Leadership</a>
+          <a href="/about#contact">Contact</a>
         </div>
       </div>
       <div className={`container ${styles.footerBottom}`}>

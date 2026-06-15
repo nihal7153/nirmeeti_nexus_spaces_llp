@@ -1,5 +1,5 @@
 "use client";
-import Link from 'next/link';
+
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -20,19 +20,19 @@ export default function Navbar() {
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.navContainer}`}>
-        <Link href="/" className={styles.logoLockup} onClick={() => setMenuOpen(false)}>
+        <a href="/" className={styles.logoLockup} onClick={() => setMenuOpen(false)}>
           <Image src="/assets/logo.png" alt="Nirmeeti Nexus Spaces Logo" width={40} height={40} style={{ objectFit: 'contain' }} className={styles.logoImage} />
           <span className={styles.logoText} style={{ textAlign: 'center' }}>NIRMEETI NEXUS<br />SPACES</span>
-        </Link>
+        </a>
 
         <nav className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ''}`}>
-          <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link href="/commercial" onClick={() => setMenuOpen(false)}>Commercial</Link>
-          <Link href="/residential" onClick={() => setMenuOpen(false)}>Residential</Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>About & Contact</Link>
-          <Link href="/about#contact" className={styles.navCta} onClick={() => setMenuOpen(false)}>
+          <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="/commercial" onClick={() => setMenuOpen(false)}>Commercial</a>
+          <a href="/residential" onClick={() => setMenuOpen(false)}>Residential</a>
+          <a href="/about" onClick={() => setMenuOpen(false)}>About & Contact</a>
+          <a href="/about#contact" className={styles.navCta} onClick={() => setMenuOpen(false)}>
             Book Consultation
-          </Link>
+          </a>
         </nav>
 
         <button className={`${styles.mobileMenuBtn} ${menuOpen ? styles.mobileMenuBtnOpen : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
