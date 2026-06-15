@@ -24,7 +24,6 @@ export default function Footer() {
           <a href="/commercial#corporate">Corporate Interiors</a>
           <a href="/commercial#spaces">Commercial Spaces</a>
           <a href="/residential#top">Residential Interiors</a>
-          <a href="/about#about">Design & Build</a>
         </div>
 
         <div className={styles.footerLinks}>
