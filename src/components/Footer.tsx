@@ -11,7 +11,7 @@ export default function Footer() {
             <Image src="/assets/logo.png" alt="Nirmeeti Nexus Spaces Logo" width={60} height={60} style={{ objectFit: 'contain' }} />
             <h2 className={styles.footerLogoText} style={{ textAlign: 'center' }}>NIRMEETI NEXUS<br />SPACES</h2>
           </div>
-          <p className="text-body">Thoughtful Designs. Effortless Spaces.</p>
+          <p style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: '1.35rem', color: 'var(--color-text-primary)', marginBottom: '1rem' }}>Thoughtful Designs. Effortless Spaces.</p>
           <div className={styles.contactInfo}>
             <p>📍 Office No. 216, The Business Hub, Kothrud, Pune – 411038</p>
             <p>📞 +91 98811 98808</p>
