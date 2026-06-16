@@ -60,7 +60,7 @@ export default function About() {
               <h3 className="heading-md" style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Our Vision</h3>
               <p className="text-body" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: '1.6' }}>To become a trusted and respected name in innovative interior and turnkey design solutions by delivering functional, timeless, and high-quality spaces.</p>
             </div>
-            <div className={styles.homeServiceCard} style={{ backgroundColor: 'var(--color-bg-primary)' }}>
+            <div className={styles.homeServiceCard}>
               <div className={styles.serviceHeader}>
                 <span className={styles.serviceNumber}>02</span>
                 <Target size={28} className={styles.serviceIcon} />
