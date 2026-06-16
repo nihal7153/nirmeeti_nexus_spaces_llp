@@ -78,7 +78,7 @@
 
 .footerLogoText {
   font-family: var(--font-logo);
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   letter-spacing: 0.15em;
   font-weight: normal;
   color: var(--color-text-primary);
