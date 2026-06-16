@@ -135,8 +135,8 @@ export default function Home() {
           
           <div className={styles.timeline}>
             {[
-              "Discovery", "Planning", "Concept Design", 
-              "Visualization", "Execution", "Handover"
+              "Requirement Understanding", "Site Study & Measurement", "Concept Development", 
+              "Design Presentation & BOQ", "Execution & Site Management", "Finishing & Handover"
             ].map((step, index) => (
               <div key={index} className={styles.timelineStep}>
                 <div className={styles.timelineDot}></div>
