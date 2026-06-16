@@ -44,10 +44,10 @@
 }
 
 .logoText {
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  font-weight: 500;
+  font-family: var(--font-logo);
+  font-size: 1.25rem;
+  letter-spacing: 0.15em;
+  font-weight: normal;
   text-transform: uppercase;
 }
 

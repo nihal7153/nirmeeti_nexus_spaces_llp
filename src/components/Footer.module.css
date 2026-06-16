@@ -76,10 +76,10 @@
 }
 
 .footerLogoText {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-family: var(--font-logo);
+  font-size: 1.75rem;
   letter-spacing: 0.15em;
-  font-weight: 500;
+  font-weight: normal;
   color: var(--color-text-primary);
   text-transform: uppercase;
 }

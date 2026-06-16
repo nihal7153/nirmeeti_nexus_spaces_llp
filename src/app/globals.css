@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
   --color-bg-primary: #FAF8F4;
@@ -10,6 +10,7 @@
 
   --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'Inter', sans-serif;
+  --font-logo: 'Bebas Neue', sans-serif;
 }
 
 * {
